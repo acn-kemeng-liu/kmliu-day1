@@ -20,6 +20,16 @@ export class StudentListComponent implements OnInit {
   sortUsers(type){
     // 参考MDN中的ES6，Array语法
     // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array
+    if (type == 'asc') {
+      // alert('dfdfg');
+      this.users.sort((a,b)=>(a.id-b.id));
+    }
+    if (type == 'desc') {
+      this.users.sort((a,b)=>(b.id-a.id));
+    }
+    if (type == 'random') {
+      this.users.sort((a,b)=>(Math.random() - 0.5));
+    }
     console.log("sortUsers Works!");
   }
   loadUsersData(){
