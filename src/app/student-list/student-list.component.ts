@@ -34,18 +34,18 @@ export class StudentListComponent implements OnInit {
   }
   loadUsersData(){
     this.users = [
-      {id:1,name:"Ryane",github:"ryanemax",sex:"male"},
-      {id:2,name:"Liming",github:"liming",sex:"male"},
-      {id:3,name:"Xiaohong",github:"xiaohong",sex:"female"}
+      {id:1,name:"五粮液",github:"wuliangye",sex:"800"},
+      {id:2,name:"茅台",github:"maotai",sex:"2800"},
+      {id:3,name:"獐子岛海参",github:"zhangzidao",sex:"3000"}
     ];
   }
   addNewUser(){
     let uuid = Number(Math.random()*1000).toFixed(0);
     let newUser:User = {
       id:Number(uuid),
-      name:"Jack",
-      github:"Jack",
-      sex:"male"
+      name:"泸州老窖",
+      github:"luzhou",
+      sex:"200"
     }
     this.users.push(newUser);
   }
